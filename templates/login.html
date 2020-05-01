@@ -1,0 +1,32 @@
+{%extends 'bootstrap/base.html'%}
+{% import "bootstrap/wtf.html" as wtf %}
+{%block content%}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class = "container">
+    <div class = "container">
+        <div class = "container">
+
+<div class = "container">
+<form method="POST"  action="/user/login">
+      {{form.hidden_tag()}}
+    {{wtf.form_field(form.username)}}
+    {{wtf.form_field(form.password)}}
+    {{wtf.form_field(form.remember)}}
+    <input type="submit" class = "btn btn-danger">
+
+    <p>Not a user yet? Register Instead <a href = "/register" >Click here</a></p>
+
+</form>
+</div>
+</div>
+</div>
+
+</div>
+{%endblock%}
